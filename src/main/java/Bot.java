@@ -19,11 +19,11 @@ public class Bot extends TelegramLongPollingBot {
 
     @Override
     public String getBotToken() {
-        return "5439233852:AAFvUsa4yUvUURLabgbDq9VgFGDDa9E-LVQ";
+        return null;
     }
 
-    private final static String FIRST_SOUND = "CQACAgIAAxkBAAMgYv4PXqgzpxmpkQABvhEzT1ELkvJCAAJEGwACvxTxS-QzchdMs1cFKQQ";
-    private final static String SECOND_SOUND = "CQACAgIAAxkBAAMiYv4Ruo6RYzgNhMgu0mGN_lJ8KvMAAlEbAAK_FPFLAk65BF7GilgpBA";
+    private final static String FIRST_SOUND = null;
+    private final static String SECOND_SOUND = null;
 
     @Override
     public void onUpdateReceived(Update update) {
