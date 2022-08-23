@@ -1,3 +1,5 @@
+package musicBot;
+
 import org.telegram.telegrambots.bots.TelegramLongPollingBot;
 import org.telegram.telegrambots.meta.api.methods.send.SendAudio;
 import org.telegram.telegrambots.meta.api.methods.send.SendMessage;
@@ -85,6 +87,21 @@ public class Bot extends TelegramLongPollingBot {
             }
         }*/
 
+/*        // Метод ля загрузки фото
+        SendMessage sendMessage =  new SendMessage();
+        sendMessage.setChatId(update.getMessage().getChatId().toString());
+        List<PhotoSize> photos = update.getMessage().getPhoto();
+
+        String f_id = photos.stream()
+                .sorted(Comparator.comparing(PhotoSize::getFileSize).reversed())
+                .findFirst()
+                .orElse(null).getFileId();
+        sendMessage.setText(f_id);
+        try {
+            execute(sendMessage);
+        } catch (TelegramApiException e) {
+            e.printStackTrace();
+        }*/
 
 /*        // метод для закачки в телегу аудио
         SendMessage sendMessage =  new SendMessage();
@@ -118,4 +135,28 @@ public class Bot extends TelegramLongPollingBot {
             }
         }*/
     }
+/*    private void greetings(Update update) {
+        String name = update.getMessage().getText();// получаем строку от пользователя
+
+        SendMessage sendMessage = new SendMessage();// предназначет чтобы отсылать сообщения пользователю
+        sendMessage.setChatId(update.getMessage().getChatId().toString());//сетаем чат в готором будет работать сообщение
+        if (name.equals("/start")) {
+            sendMessage.setText("Enter your name ");//шлём текст на любую реакцию пользователя
+            try {
+                execute(sendMessage);
+            } catch (TelegramApiException e) {
+                e.printStackTrace();
+            }
+        } else {
+            sendMessage.setText("Hi " + name);//шлём текст на любую реакцию пользователя
+            try {
+                execute(sendMessage);
+            } catch (TelegramApiException e) {
+                e.printStackTrace();
+            }
+        }
+
+    }*/
+
+
 }
